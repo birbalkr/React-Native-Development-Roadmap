@@ -1,23 +1,22 @@
+# 📁 Project Directory Structure
+
+```bash
 my-app/
-│
 ├── app/                            # Screens and layout for routing (especially for Expo Router)
 │   ├── (tabs)/                     # Tab-based navigation structure
 │   │   ├── _layout.tsx
 │   │   ├── home.tsx
 │   │   ├── explore.tsx
 │   │   ├── profile.tsx
-│   │   ├── progress.tsx
-│   │
+│   │   └── progress.tsx
 │   ├── movies/                     # Dynamic or nested routes
 │   │   ├── [id].tsx
 │   │   └── _layout.tsx
-│   │
 │   ├── auth/                       # Authentication pages
 │   │   ├── SignIn.jsx
 │   │   ├── SignUp.jsx
-│   │   └── ForgetPassword.jsx
+│   │   ├── ForgetPassword.jsx
 │   │   └── _layout.tsx
-│
 │   └── index.tsx                   # Entry point (Landing or Home)
 │
 ├── assets/                         # Static assets
@@ -72,4 +71,4 @@ my-app/
 ├── package.json
 ├── babel.config.js
 ├── eslint.config.js
-├── README.md
+└── README.md
