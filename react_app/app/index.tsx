@@ -1,18 +1,9 @@
-import { Text, View } from "react-native";
+import { View } from "react-native";
+import '.././global.css';
 
 export default function Index() {
   return (
-    <View style={{ flex: 1 }}>
-
-      <View style={{backgroundColor:'red', flex: 1,}}></View>
-      <View style={{backgroundColor:'green', flex: 1,}}></View>
-      <View style={{backgroundColor:'blue', flex: 1,}}></View>
-      <View style={{backgroundColor:'purple', flex: 1,}}></View>
-      <View style={{backgroundColor:'orange', flex: 1,}}></View>
-      
-
-
-    </View>
+    <></>
   );
 }
 
