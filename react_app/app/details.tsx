@@ -1,31 +1,9 @@
-import { Stack, useLocalSearchParams, useRouter } from 'expo-router';
-import { StyleSheet, Text, View } from 'react-native';
+import { View, Text } from 'react-native';
 
 export default function Details() {
-    const router = useRouter();
-    const params = useLocalSearchParams();
-
     return (
-        <View style={styles.container}>
-            <Stack.Screen
-                options={{
-                    title: params.name,
-                }}
-            />
-            <Text
-                onPress={() => {
-                    router.setParams({ name: 'Updated' });
-                }}>
-                Update the title
-            </Text>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+            <Text>Details Screen</Text>
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-});
