@@ -1,22 +1,22 @@
-import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { Drawer } from 'expo-router/drawer';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export default function Layout() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer>
         <Drawer.Screen
-          name="index" // This is the name of the page and must match the url from root
+          name="(tabs)" // route group that contains tabs
           options={{
             drawerLabel: 'Home',
-            title: 'overview',
+            title: 'Home',
           }}
         />
         <Drawer.Screen
-          name="details" // This is the name of the page and must match the url from root
+          name="Index" // route group that contains tabs
           options={{
-            drawerLabel: 'User',
-            title: 'overview',
+            drawerLabel: 'Index',
+            title: 'Index',
           }}
         />
       </Drawer>
