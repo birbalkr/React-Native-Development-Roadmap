@@ -1,29 +1,41 @@
-import { Platform, View, Text } from 'react-native';
-import '.././global.css'; // assuming Tailwind setup
+import { Link, Stack } from 'expo-router';
+import { Image, StyleSheet, Text, View } from 'react-native';
 
-export default function Index() {
+function LogoTitle() {
   return (
-    <View style={{ flex: 1 }}>
+    <Image style={styles.image} source={{ uri: 'https://reactnative.dev/img/tiny_logo.png' }} />
+  );
+}
 
-      {Platform.OS === 'ios' && (
-        <View className='bg-pink-500 flex-1'>
-          <View style={{ backgroundColor: 'green', flex: 2 }} />
-          <View style={{ backgroundColor: 'blue', flex: 5 }} />
-          <View style={{ backgroundColor: 'purple', flex: 1 }} />
-          <View style={{ backgroundColor: 'orange', flex: 3 }} />
-        </View>
-      )}
+export default function Home() {
+  return (
+    <View style={styles.container}>
+      <Stack.Screen
+        options={{
+          title: 'My home',
+          headerStyle: { backgroundColor: '#f4511e' },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+          },
 
-      {Platform.OS === 'android' && (
-        <View style={{ backgroundColor: 'red', flex: 1 }}>
-          <View style={{ backgroundColor: 'green', flex: 1 }} />
-          <View style={{ backgroundColor: 'blue', flex: 1 }} />
-          <View style={{ backgroundColor: 'purple', flex: 1 }} />
-          <View style={{ backgroundColor: 'orange', flex: 1 }} />
-        </View>
-      )}
-
-
+          headerTitle: props => <LogoTitle {...props} />,
+        }}
+      />
+      <Text>Home Screen</Text>
+      <Link href={{ pathname: 'details', params: { name: 'Bacon' } }}>Go to Details</Link>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  image: {
+    width: 50,
+    height: 50,
+  },
+});
