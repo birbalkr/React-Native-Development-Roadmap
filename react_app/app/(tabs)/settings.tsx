@@ -1,10 +1,14 @@
-import { View, Text } from 'react-native'
 import React from 'react'
+import { Text, View } from 'react-native'
+import Counter from '../../components/Counter'
 
 const settings = () => {
     return (
         <View>
-            <Text>settings</Text>
+            <Text style={{ fontSize: 20, textAlign: 'center', marginVertical: 20 }}>
+                Counter
+            </Text>
+            <Counter />
         </View>
     )
 }

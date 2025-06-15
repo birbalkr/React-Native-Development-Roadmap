@@ -1,6 +1,6 @@
-import { View, Text, StyleSheet } from 'react-native';
-import React, { useContext } from 'react';
 import { AppContexts } from '@/context/Context';
+import React, { useContext } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 const Profile = () => {
     const { userDetail } = useContext(AppContexts);
@@ -13,6 +13,7 @@ const Profile = () => {
                     Name: {user.title}
                 </Text>
             ))}
+
         </View>
     );
 };
